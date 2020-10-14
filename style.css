@@ -1,0 +1,206 @@
+/*Обнуление*/
+*,
+*:before,
+*:after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+	background-color: #333;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: #fff;
+	font-size: 16px;
+}
+
+.wrapper {
+	min-height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.content {
+	padding: 50px 0;
+	max-width: 1000px;
+	margin: 0px auto;
+}
+.tabs {
+	margin: 0px 0px 50px 0px;
+}
+.tabs__items {
+	display: flex;
+}
+.tabs__item {
+	flex: 0 1 33.333%;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+	color: #fff;
+	text-decoration: none;
+}
+.tabs__item span {
+	position: relative;
+	z-index: 2;
+}
+
+.tabs__body {
+}
+.tabs__block {
+	position: relative;
+	padding: 20px;
+	font-size: 18px;
+	line-height: 24px;
+	display: none;
+}
+.tabs__block:before {
+	content: "";
+	height: 50px;
+	width: 33.333%;
+	position: absolute;
+	top: -50px;
+}
+
+.tabs__block:nth-child(1) {
+	background-color: #eb8698;
+}
+.tabs__block:nth-child(1):before {
+	background-color: #eb8698;
+	left: 0;
+}
+.tabs__block:nth-child(2) {
+	background-color: #9278aa;
+}
+.tabs__block:nth-child(2):before {
+	background-color: #9278aa;
+	left: 33.333%;
+}
+.tabs__block:nth-child(3) {
+	background-color: #97c67d;
+}
+.tabs__block:nth-child(3):before {
+	background-color: #97c67d;
+	right: 0;
+}
+
+.tabs__block:target {
+	display: block;
+}
+
+.text {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+@media (max-width: 600px) {
+	.tabs__item span {
+		display: block;
+		width: 100px;
+		padding: 0px 5px;
+		white-space: nowrap;
+		text-align: center;
+		overflow: hidden;
+		font-size: 14px;
+		text-overflow: ellipsis;
+	}
+}
+
+body {
+	display: all;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+
+.btn {
+	font-size: 20px;
+	font-family: monospace;
+	color: #fff;
+	background: linear-gradient(to left, #0F2027, #203A43, ,#0F2027);
+}
+
+/*** Материал подготовлен сайтом roothelp.ru ***/
+
+#content{
+	width:1000px;
+	margin:50px auto 0px;
+}
+
+/*** Создание простого меню для сайта | HTML+CSS ***/
+
+#nav{
+	font-family: 'Open Sans', arial;
+}
+
+#nav li{
+	float:left; /* все ссылки идут слева на право */
+    position:relative;
+    list-style:none; /* убираем точки */
+    background:#ff3131;
+	width:190px;
+}
+
+#nav a{
+    text-decoration:none;
+    display:block; /* делаем блочным элементов тег "a" */
+    padding:35px 65px;
+    color:#ffffff;
+}
+
+#active a, #nav li:hover > a{
+    background:#b32424;
+}
+
+#nav ul {
+	visibility:hidden; /* скрываем выпадающее меню */
+    padding:0;  
+    position:absolute;
+}
+
+#nav li:hover > ul{
+    visibility:visible; /* показываем выпадающее меню при наведении */
+	position: relative;
+    left: -2px; /* смещаем выпадающее меню слева от размера рамки*/
+}
+
+#nav ul a{
+	padding:18.5px 65px; /* делаем отступы выпадающего меню меньше от основного */
+}
+
+#nav ul li:hover{
+    background:#d92a2a;
+}
+
+#nav li:first-child:hover > ul{
+	left: 0px; /* при наведении на первый элемент чтобы не съежало выпадающее меню */
+}
+
+#nav > li{
+	border-right: 2px solid #d92a2a; /* добавляем рамку к основному меню справа */
+}
+
+#nav > li:last-child{
+	border-right: none; /* убираем рамку справа основного меню */
+}
+
+#nav > li ul li{
+	border-left: 2px solid #d92a2a; /* добавляем рамку к выпадающему меню слева */
+	border-right:2px solid #d92a2a; /* добавляем рамку к выпадающему меню справа */
+}
+
+#nav li:first-child ul li,#nav li:first-child ul{
+	border-left:none; /* убираем рамку у выпадающего меню слева */
+} 
+#nav li:last-child ul li,#nav li:last-child ul{
+	border-right:none; /* убираем рамку у выпадающего меню справа */
+} 
+
+a {
+	color: #ffffff;
+}
